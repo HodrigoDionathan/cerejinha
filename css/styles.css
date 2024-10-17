@@ -1,6 +1,6 @@
 body {
   font-family: DynaPuff, sans-serif;
-  margin: 0;
+  margin: auto;
   padding: 0;
   background: linear-gradient(to bottom, #4a90e2, #003f7f);
   display: flex;
@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 0;
+  
 }
 
 .components {
@@ -30,6 +30,7 @@ body {
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: space-between;
 }
 
 .component {
@@ -41,7 +42,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 176px);
   grid-gap: 10px;
-  margin-bottom: 20px;
+  
   justify-content: center;
 }
 
@@ -73,9 +74,9 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
   color: white;
-  padding: 5px;
+  padding: 0px;
 }
 
 
@@ -114,12 +115,12 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
   .game-board {
-    grid-template-columns: repeat(2, 60px); /* Duas colunas em telas menores */
+    grid-template-columns: repeat(3, 92px); /* Duas colunas em telas menores */
   }
 
   .slot, .component {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 42px;
   }
 
   .lamp img {
@@ -161,7 +162,7 @@ body {
 
 .speech-bubble {
   position: absolute; /* Posiciona o balão em relação ao contêiner */
-  bottom: -56%; /* Posiciona acima da imagem */
+  bottom: 4%; /* Posiciona acima da imagem */
   left: 256%; /* Centraliza o balão em relação à imagem */
   transform: translateX(-80%); /* Centraliza o balão horizontalmente */
   background-color: #75bf77; /* Cor de fundo do balão */
