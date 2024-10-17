@@ -79,3 +79,21 @@ body {
   margin-top: 10px;
   font-weight: bold;
 }
+
+/* Estilo para as cerejas caindo */
+.cherry {
+  position: absolute;
+  width: 30px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
