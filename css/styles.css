@@ -39,7 +39,7 @@ body {
 
 .game-board {
   display: grid;
-  grid-template-columns: repeat(4, 140px);
+  grid-template-columns: repeat(4, 176px);
   grid-gap: 10px;
   margin-bottom: 20px;
   justify-content: center;
@@ -169,7 +169,7 @@ body {
   padding: 10px; /* Espaçamento interno do balão */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Sombra do balão */
   color: #fafafa; /* Cor do texto */
-  font-size: 19px; /* Tamanho da fonte */
+  font-size: 12px; /* Tamanho da fonte */
   z-index: 1; /* Para garantir que o balão fique acima da imagem */
 }
 
