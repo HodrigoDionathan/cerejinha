@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quebra-Cabeça TCC - Ajude o Cerejinha!</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Chango&family=DynaPuff:wght@400..700&family=Sniglet:wght@400;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+  </style>
 </head>
 <div id="cherryRainContainer"></div> <!-- Container para a chuva de cerejas -->
 </div>
@@ -12,15 +16,11 @@
   <div id="cherryRainContainer"></div> <!-- Container para a chuva de cerejas -->
 </div>
   <div class="container">
-    <h1 style="font-size: 20px;">Ajude o Cerejinha a Montar o Projeto do TCC</h1>
-    <p>Monte o projeto e faça a Lampada Acender</p>
+    <h1 style="font-size: 20px; color:white; border:4px; font-family: DynaPuff;">Ajude o Cerejinha a Montar o Projeto do TCC</h1>
+    <p>Monte o projeto e faça a Lampada Acender</p><br> Clique nos componentes abaixo para organizá-los
     <div class="game-area">
       <div class="components">
-        <div class="component-wrapper">
-          <span class="component-name">Bateria</span>
-          <img src="imagens/bateria.png" alt="Bateria" class="component" data-id="1">
-          
-        </div>
+        
         <div class="component-wrapper">
           <span class="component-name">Transformador</span>
           <img src="imagens/trafo.png" alt="Transformador" class="component" data-id="2">
@@ -37,6 +37,17 @@
           
         </div>
         <div class="component-wrapper">
+          <span class="component-name">Bateria</span>
+          <img src="imagens/bateria.png" alt="Bateria" class="component" data-id="1">
+          
+        </div>
+        <div class="component-wrapper">
+          <span class="component-name">Transistor</span>
+          <img src="imagens/transisto.png" alt="Transistor" class="component" data-id="8">
+          
+        </div>
+
+        <div class="component-wrapper">
           <span class="component-name">Eixo</span>
           <img src="imagens/eixo.png" alt="Eixo" class="component" data-id="5">
           
@@ -51,11 +62,7 @@
           <img src="imagens/trafo.png" alt="Transformador" class="component" data-id="7">
           
         </div>
-        <div class="component-wrapper">
-          <span class="component-name">Transistor</span>
-          <img src="imagens/transisto.png" alt="Transistor" class="component" data-id="8">
-          
-        </div>
+        
       </div>
       
       </div>
@@ -74,8 +81,13 @@
         <img src="imagens/lampada-apagada.png" alt="Lâmpada" id="lampada">
       </div>
     </div>
-    <div class="cerejinha">
+    <div class="cerejinha-container">
       <img src="imagens/cerejinhaduvida.png" alt="Cerejinha" id="cerejinha">
+      <div class="speech-bubble">
+        Olá, eu sou o Cerejinha, me ajude a montar o Projeto do TCC!
+      </div>
+    </div>
+    
     </div>
     <br><button id="reset">Reiniciar</button>
     <p id="message"></p>
