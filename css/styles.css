@@ -65,7 +65,7 @@ body {
 }
 
 .slot {
-  width: 80px; /* Aumentar o tamanho dos slots */
+  width: 132px; /* Aumentar o tamanho dos slots */
   height: 80px;
   border: 2px dashed white;
   display: flex;
