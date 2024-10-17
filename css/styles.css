@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #4a90e2, #003f7f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.container {
+  text-align: center;
+}
+
+.game-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.components {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 200px;
+}
+
+.component {
+  width: 50px;
+  cursor: pointer;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-gap: 10px;
+}
+
+.slot {
+  width: 60px;
+  height: 60px;
+  border: 2px dashed white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lamp {
+  margin-left: 20px;
+}
+
+.lamp img {
+  width: 50px;
+}
+
+.cerejinha {
+  margin-top: 20px;
+}
+
+#cerejinha {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+#reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #003f7f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#message {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}

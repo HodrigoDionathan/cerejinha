@@ -1,0 +1,20 @@
+quero fazer uma pagina que simulara uma quebra cabeça 
+coloque um fundo em gradiente de dois tons de azuis
+HTML CSS JS
+
+a pagina tera um espaço para os componentes e outro espaço vazio onde cada componente tera de entrar após o clique do usuario sobre os componentes
+
+o espaço vazio sera numerado e o usuario podera escolher a ordem em que os componetes irmão entrar. 
+
+o jogo e o seguinte: Ajude o cerejinha* a montar o projeto do TCC.
+o projeto e o seguinte, uma bateria um transformador um capacitor um motor eletrico um eixo um estator um transformado um transistor. 
+objetivo do jogo : Fazer a lampada acender.
+
+no corpo do jogo havera uma lampada apagada que acendera toda vez que o usuario conseguir montar a sequencia de componentes na forma que fooi descrito acima . 
+
+
+os componentes serão reprensentado por imagens 
+fora do corpo do jogo tera um botão reenicia para zerar o jogo . 
+fora do jogo havera uma imagem do personagen Cerejinha, toda vez que o jogo for concluido com sucesso essa imagem mudara e ficara com efeito de zoom em movimento, a pagina tambem tera efeitos especiais de comemoração, mais quando o usuario errar a combinação dos componentes aparecera outra imagem e uma mensagem" TENTE DE NOVO MEU CHEFE".
+
+o jogo deve ser feito para funcionar tanto em desktops quanto em celulares

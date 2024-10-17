@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quebra-Cabeça TCC - Ajude o Cerejinha!</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ajude o Cerejinha a Montar o Projeto do TCC</h1>
+    <div class="game-area">
+      <div class="components">
+        <img src="bateria.png" alt="Bateria" class="component" data-id="1">
+        <img src="transformador.png" alt="Transformador" class="component" data-id="2">
+        <img src="capacitor.png" alt="Capacitor" class="component" data-id="3">
+        <img src="motor.png" alt="Motor Elétrico" class="component" data-id="4">
+        <img src="eixo.png" alt="Eixo" class="component" data-id="5">
+        <img src="estator.png" alt="Estator" class="component" data-id="6">
+        <img src="transformador2.png" alt="Transformador" class="component" data-id="7">
+        <img src="transistor.png" alt="Transistor" class="component" data-id="8">
+      </div>
+      <div class="game-board">
+        <div class="slot" data-slot="1"></div>
+        <div class="slot" data-slot="2"></div>
+        <div class="slot" data-slot="3"></div>
+        <div class="slot" data-slot="4"></div>
+        <div class="slot" data-slot="5"></div>
+        <div class="slot" data-slot="6"></div>
+        <div class="slot" data-slot="7"></div>
+        <div class="slot" data-slot="8"></div>
+      </div>
+      <div class="lamp">
+        <img src="lamp_off.png" alt="Lâmpada" id="lampada">
+      </div>
+    </div>
+    <div class="cerejinha">
+      <img src="cerejinha.png" alt="Cerejinha" id="cerejinha">
+    </div>
+    <button id="reset">Reiniciar</button>
+    <p id="message"></p>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
