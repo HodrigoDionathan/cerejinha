@@ -6,32 +6,70 @@
   <title>Quebra-Cabeça TCC - Ajude o Cerejinha!</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+<div id="cherryRainContainer"></div> <!-- Container para a chuva de cerejas -->
+</div>
 <body>
   <div id="cherryRainContainer"></div> <!-- Container para a chuva de cerejas -->
 </div>
   <div class="container">
     <h1>Ajude o Cerejinha a Montar o Projeto do TCC</h1>
+    <p>Monte o projeto e faça a Lampada Acender</p>
     <div class="game-area">
       <div class="components">
-        <img src="imagens/bateria.png" alt="Bateria" class="component" data-id="1">
-        <img src="imagens/trafo.png" alt="Transformador" class="component" data-id="2">
-        <img src="imagens/capacitor.png" alt="Capacitor" class="component" data-id="3">
-        <img src="imagens/motorele.png" alt="Motor Elétrico" class="component" data-id="4">
-        <img src="imagens/eixo.png" alt="Eixo" class="component" data-id="5">
-        <img src="imagens/estator.png" alt="Estator" class="component" data-id="6">
-        <img src="imagens/trafo.png" alt="Transformador" class="component" data-id="7">
-        <img src="imagens/transisto.png" alt="Transistor" class="component" data-id="8">
+        <div class="component-wrapper">
+          <span class="component-name">Bateria</span>
+          <img src="imagens/bateria.png" alt="Bateria" class="component" data-id="1">
+          
+        </div>
+        <div class="component-wrapper">
+          <span class="component-name">Transformador</span>
+          <img src="imagens/trafo.png" alt="Transformador" class="component" data-id="2">
+          
+        </div>
+        <div class="component-wrapper">
+          <span class="component-name">Capacitor</span>
+          <img src="imagens/capacitor.png" alt="Capacitor" class="component" data-id="3">
+         
+        </div>
+        <div class="component-wrapper">
+          <span class="component-name">Motor Elétrico</span>
+          <img src="imagens/motorele.png" alt="Motor Elétrico" class="component" data-id="4">
+          
+        </div>
+        <div class="component-wrapper">
+          <span class="component-name">Eixo</span>
+          <img src="imagens/eixo.png" alt="Eixo" class="component" data-id="5">
+          
+        </div>
+        <div class="component-wrapper">
+          <span class="component-name">Estator</span>
+          <img src="imagens/estator.png" alt="Estator" class="component" data-id="6">
+          
+        </div>
+        <div class="component-wrapper">
+          <span class="component-name">Transformador</span>
+          <img src="imagens/trafo.png" alt="Transformador" class="component" data-id="7">
+          
+        </div>
+        <div class="component-wrapper">
+          <span class="component-name">Transistor</span>
+          <img src="imagens/transisto.png" alt="Transistor" class="component" data-id="8">
+          
+        </div>
+      </div>
+      
       </div>
       <div class="game-board">
-        <div class="slot" data-slot="1"></div>
-        <div class="slot" data-slot="2"></div>
-        <div class="slot" data-slot="3"></div>
-        <div class="slot" data-slot="4"></div>
-        <div class="slot" data-slot="5"></div>
-        <div class="slot" data-slot="6"></div>
-        <div class="slot" data-slot="7"></div>
-        <div class="slot" data-slot="8"></div>
+        <div class="slot" data-slot="1">Bateria</div>
+        <div class="slot" data-slot="2">Transformador</div>
+        <div class="slot" data-slot="3">Capacitor</div>
+        <div class="slot" data-slot="4">Motor Elétrico</div>
+        <div class="slot" data-slot="5">Eixo</div>
+        <div class="slot" data-slot="6">Estator</div>
+        <div class="slot" data-slot="7">Transformador</div>
+        <div class="slot" data-slot="8">Transistor</div>
       </div>
+      
       <div class="lamp">
         <img src="imagens/lampada-apagada.png" alt="Lâmpada" id="lampada">
       </div>
@@ -41,6 +79,7 @@
     </div>
     <br><button id="reset">Reiniciar</button>
     <p id="message"></p>
+   
    
   </div>
 

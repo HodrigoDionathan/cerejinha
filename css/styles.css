@@ -4,19 +4,22 @@ body {
   padding: 0;
   background: linear-gradient(to bottom, #4a90e2, #003f7f);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
 }
 
 .container {
   text-align: center;
+  max-width: 100%;
+  width: 90%;
 }
 
 .game-area {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
   margin: 20px 0;
 }
@@ -24,8 +27,9 @@ body {
 .components {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
-  width: 200px;
+  margin-bottom: 20px;
 }
 
 .component {
@@ -35,21 +39,47 @@ body {
 
 .game-board {
   display: grid;
-  grid-template-columns: repeat(4, 60px);
+  grid-template-columns: repeat(4, 100px);
   grid-gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.component-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.component-name {
+  margin-bottom: 5px; /* Espaço abaixo do nome */
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.component {
+  width: 80px; /* Aumentar o tamanho dos componentes */
+  cursor: pointer;
 }
 
 .slot {
-  width: 60px;
-  height: 60px;
+  width: 80px; /* Aumentar o tamanho dos slots */
+  height: 80px;
   border: 2px dashed white;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  padding: 5px;
 }
 
+
 .lamp {
-  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .lamp img {
@@ -57,7 +87,7 @@ body {
 }
 
 .cerejinha {
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #cerejinha {
@@ -78,6 +108,30 @@ body {
   font-size: 20px;
   margin-top: 10px;
   font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .game-board {
+    grid-template-columns: repeat(2, 60px); /* Duas colunas em telas menores */
+  }
+
+  .slot, .component {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lamp img {
+    width: 40px;
+  }
+
+  #cerejinha {
+    width: 80px;
+  }
+
+  #reset {
+    width: 100%;
+  }
 }
 
 /* Estilo para as cerejas caindo */

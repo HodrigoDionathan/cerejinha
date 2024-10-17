@@ -30,7 +30,7 @@ function checkOrder() {
       message.textContent = 'Parabéns, você montou corretamente!';
       startCherryRain(); // Inicia a chuva de cerejas
     } else {
-      message.textContent = 'TENTE DE NOVO MEU CHEFE!';
+      message.textContent = 'TENTE DE NOVAMENTE MEU CHEFE!';
       cerejinha.src = 'imagens/cerejinhaduvida.png';
       cerejinha.style.transform = 'scale(2)';
     }
