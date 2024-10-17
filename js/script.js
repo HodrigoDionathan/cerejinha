@@ -23,22 +23,22 @@ document.getElementById('reset').addEventListener('click', function() {
 function checkOrder() {
   if (userOrder.length === 8) {
     if (JSON.stringify(userOrder) === JSON.stringify(correctOrder)) {
-      lamp.src = 'imagens/lampada-acesa.png';
-      cerejinha.src = 'imagens/cerejinhafeliz.png';
+      lamp.src = 'lampada-acesa.png';
+      cerejinha.src = 'cerejinhafeliz.png';
       cerejinha.style.transform = 'scale(1.2)';
       message.textContent = 'Parabéns, você montou corretamente!';
       document.body.style.backgroundColor = '#00ff00'; // Efeito de comemoração
     } else {
       message.textContent = 'TENTE DE NOVO MEU CHEFE!';
-      cerejinha.src = 'imagens/cerejinhaduvida.png';
+      cerejinha.src = 'cerejinhaduvida.png';
     }
   }
 }
 
 function resetGame() {
   userOrder = [];
-  lamp.src = 'imagens/lapada-apagada.png';
-  cerejinha.src = 'imagens/cerejinhaduvida.png';
+  lamp.src = 'lapada-apagada.png';
+  cerejinha.src = 'cerejinhaduvida.png';
   cerejinha.style.transform = 'scale(1)';
   message.textContent = '';
   slots.forEach(slot => (slot.innerHTML = ''));
