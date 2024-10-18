@@ -186,3 +186,22 @@ body {
   border-style: solid;
   border-color: transparent transparent #75bf77 transparent; /* Cores da ponta */
 }
+
+.instruction-box {
+  background-color: #ffffff; /* Cor de fundo da caixa */
+  border: 2px solid #333; /* Borda */
+  padding: 15px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center; /* Centralizar o texto */
+  width: 60%; /* Largura da caixa */
+  margin: 20px auto; /* Centralizar horizontalmente e dar margem */
+  font-family: 'DynaPuff', cursive; /* Fonte personalizada */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+}
+
+.instruction-box p {
+  margin: 10px 0; /* Margem entre os parágrafos */
+}
+
