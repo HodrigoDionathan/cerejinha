@@ -6,6 +6,18 @@ const message = document.getElementById('message');
 const slots = document.querySelectorAll('.slot');
 const cherryRainContainer = document.getElementById('cherryRainContainer');
 
+// Descrições ou imagens padrão para os slots
+const slotDescriptions = [
+  'Componente 1',
+  'Componente 2',
+  'Componente 3',
+  'Componente 4',
+  'Componente 5',
+  'Componente 6',
+  'Componente 7',
+  'Componente 8'
+];
+
 // Adicionar evento de clique aos componentes
 document.querySelectorAll('.component').forEach(component => {
   component.addEventListener('click', function() {
@@ -65,6 +77,11 @@ function resetGame() {
   cerejinha.src = 'imagens/cerejinhaduvida.png';
   cerejinha.style.transform = 'scale(1)';
   message.textContent = '';
-  slots.forEach(slot => (slot.innerHTML = ''));
+
+  // Reseta os slots com a descrição ou imagem padrão
+  slots.forEach((slot, index) => {
+    slot.innerHTML = slotDescriptions[index]; // Adiciona a descrição
+  });
+
   clearCherryRain(); // Limpa a chuva de cerejas
 }
