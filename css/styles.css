@@ -40,8 +40,9 @@ body {
 
 .game-board {
   display: grid;
-  grid-template-columns: repeat(4, 176px);
+  grid-template-columns: repeat(4, 120px);
   grid-gap: 10px;
+  margin-box: 4px 7px 4px 3px;
   
   justify-content: center;
 }
