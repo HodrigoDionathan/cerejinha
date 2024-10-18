@@ -188,17 +188,18 @@ body {
 }
 
 .instruction-box {
-  background-color: #ffffff; /* Cor de fundo da caixa */
+  text-shadow: 1px 1px 2px black;
+  background-color: #75bf77; /* Cor de fundo da caixa */
   border: 2px solid #333; /* Borda */
-  padding: 15px; /* Espaçamento interno */
+  padding: 5px; /* Espaçamento interno */
   border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
   text-align: center; /* Centralizar o texto */
-  width: 60%; /* Largura da caixa */
+  width: 40%; /* Largura da caixa */
   margin: 20px auto; /* Centralizar horizontalmente e dar margem */
   font-family: 'DynaPuff', cursive; /* Fonte personalizada */
-  font-size: 1.2rem; /* Tamanho da fonte */
-  color: #333; /* Cor do texto */
+  font-size: 0.90rem; /* Tamanho da fonte */
+  color: #ffffff; /* Cor do texto */
 }
 
 .instruction-box p {
