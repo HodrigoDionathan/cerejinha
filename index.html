@@ -1,13 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quebra-Cabeça TCC - Ajude o Cerejinha!</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="csss/styles.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Chango&family=DynaPuff:wght@400..700&family=Sniglet:wght@400;800&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+ 
+        .lamp {
+            display: flex;               /* Ativa o flexbox */
+            justify-content: center;     /* Centraliza horizontalmente */
+            align-items: center;         /* Centraliza verticalmente */
+            height: 100px;               /* Defina uma altura, se necessário */
+        }
+   
+  
   </style>
 </head>
 <div id="cherryRainContainer"></div> <!-- Container para a chuva de cerejas -->
@@ -15,55 +25,58 @@
 <body>
   <div id="cherryRainContainer"></div> <!-- Container para a chuva de cerejas -->
 </div>
-  <div class="container">
-    
-    <h1 style="font-size: 20px; color:white; border:4px; font-family: DynaPuff;">Ajude o Cerejinha a Montar o Projeto do TCC</h1>
+  <div class="containere">
+   <h1 style="text-shadow: 2px 1px 5px black;font-size: 20px; color:white; border: 4px; font-family: DynaPuff; text-align: center;">
+  Ajude o Cerejinha a Montar o Projeto do TCC
+</h1>
+
     <div class="instruction-box">
-    <p>Monte o projeto e faça a Lampada Acender. </p> 
+			 <p>Monte o projeto e faça a Lampada Acender. </p> 
     <p>Clique nos componentes abaixo para organizá-los</p>
+			
     </div>
-      <div class="game-area">
+    <div class="game-area">
       <div class="components">
         
         <div class="component-wrapper">
           <span class="component-name">Transformador +</span>
-          <img src="imagens/trafo.png" alt="Transformador" class="component" data-id="2">
+          <img src="imagenss/trafo.png" alt="Transformador" class="component" data-id="2">
           
         </div>
         <div class="component-wrapper">
           <span class="component-name">Capacitor</span>
-          <img src="imagens/capacitor.png" alt="Capacitor" class="component" data-id="3">
+          <img src="imagenss/capacitor.png" alt="Capacitor" class="component" data-id="3">
          
         </div>
         <div class="component-wrapper">
           <span class="component-name">Motor Elétrico</span>
-          <img src="imagens/motorele.png" alt="Motor Elétrico" class="component" data-id="4">
+          <img src="imagenss/motorele.png" alt="Motor Elétrico" class="component" data-id="4">
           
         </div>
         <div class="component-wrapper">
           <span class="component-name">Bateria</span>
-          <img src="imagens/bateria.png" alt="Bateria" class="component" data-id="1">
+          <img src="imagenss/bateria.png" alt="Bateria" class="component" data-id="1">
           
         </div>
         <div class="component-wrapper">
           <span class="component-name">Transistor</span>
-          <img src="imagens/transisto.png" alt="Transistor" class="component" data-id="8">
+          <img src="imagenss/transisto.png" alt="Transistor" class="component" data-id="8">
           
         </div>
 
         <div class="component-wrapper">
           <span class="component-name">Eixo</span>
-          <img src="imagens/eixo.png" alt="Eixo" class="component" data-id="5">
+          <img src="imagenss/eixo.png" alt="Eixo" class="component" data-id="5">
           
         </div>
         <div class="component-wrapper">
           <span class="component-name">Estator</span>
-          <img src="imagens/estator.png" alt="Estator" class="component" data-id="6">
+          <img src="imagenss/estator.png" alt="Estator" class="component" data-id="6">
           
         </div>
         <div class="component-wrapper">
           <span class="component-name">Transformador -</span>
-          <img src="imagens/trafo.png" alt="Transformador" class="component" data-id="7">
+          <img src="imagenss/trafo.png" alt="Transformador" class="component" data-id="7">
           
         </div>
         
@@ -90,23 +103,23 @@
       </div>
       
       <div class="lamp">
-        <img src="imagens/lampada-apagada.png" alt="Lâmpada" id="lampada">
+        <img src="imagenss/lampada-apagada.png" alt="Lâmpada" id="lampada">
       </div>
     </div>
     <div class="cerejinha-container">
-      <img src="imagens/cerejinhaduvida.png" alt="Cerejinha" id="cerejinha">
+      <img src="imagenss/cerejinhaduvida.png" alt="Cerejinha" id="cerejinha">
       <div class="speech-bubble">
         Olá, eu sou o Cerejinha, me ajude a montar o Projeto do TCC!
       </div>
     </div>
     
     </div>
-    <br><button id="reset">Reiniciar</button>
+    <br><button id="reset">REINICIAR</button>
     <p id="message"></p>
    
    
   </div>
 
-  <script src="js/script.js"></script>
+  <script src="jss/script.js"></script>
 </body>
 </html>
