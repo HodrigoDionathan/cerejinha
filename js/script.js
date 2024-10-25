@@ -1,4 +1,3 @@
-
 const correctOrder = [1, 2, 3, 4, 5, 6, 7, 8];
 let userOrder = [];
 const lamp = document.getElementById('lampada');
@@ -6,48 +5,55 @@ const cerejinha = document.getElementById('cerejinha');
 const message = document.getElementById('message');
 const slots = document.querySelectorAll('.slot');
 const cherryRainContainer = document.getElementById('cherryRainContainer');
+const speechBubble = document.querySelector('.speech-bubble'); // Balão de fala
 
-// Adiciona evento a todos os componentes disponíveis
+// Nomes dos componentes
+const componentNames = [
+  "Bateria",
+  "Transformador +",
+  "Capacitor",
+  "Motor Elétrico",
+  "Eixo",
+  "Estator",
+  "Transformador -",
+  "Transistor"
+];
+
+// Inicializa as caixas vazias com os nomes dos componentes
+slots.forEach((slot, index) => {
+  slot.textContent = componentNames[index]; // Coloca o nome do componente no slot correspondente
+});
+
+// Mensagem inicial de apresentação do personagem
+speechBubble.textContent = 'Olá, eu sou o Cerejinha! Me ajude a montar o projeto do TCC.';
+
+// Evento de clique nos componentes
 document.querySelectorAll('.component').forEach(component => {
   component.addEventListener('click', function() {
-    const componentId = Number(this.getAttribute('data-id'));
-
-    // Verifica se o componente já está na montagem
-    const indexInUserOrder = userOrder.indexOf(componentId);
-    if (indexInUserOrder > -1) {
-      // Se o componente já estiver montado, remove-o
-      const slot = document.querySelector(`.slot[data-slot="${indexInUserOrder + 1}"]`);
-      slot.innerHTML = ''; // Limpa o slot
-      userOrder.splice(indexInUserOrder, 1); // Remove o componente da ordem do usuário
-    } else if (userOrder.length < 8) {
-      // Se o componente não estiver montado e houver espaço, adiciona-o
+    if (userOrder.length < 8) {
       const slot = document.querySelector(`.slot[data-slot="${userOrder.length + 1}"]`);
       slot.innerHTML = `<img src="${this.src}" class="component">`;
-      userOrder.push(componentId);
+      userOrder.push(Number(this.getAttribute('data-id')));
+      checkOrder(); // Verifica a ordem após cada escolha
     }
-
-    checkOrder(); // Verifica a ordem após cada adição ou remoção
   });
 });
 
-// Reseta o jogo ao clicar no botão de reset
-document.getElementById('reset').addEventListener('click', function() {
-  resetGame();
-});
-
-// Função para verificar a ordem dos componentes montados
+// Função para verificar a ordem da montagem
 function checkOrder() {
   if (userOrder.length === 8) {
     if (JSON.stringify(userOrder) === JSON.stringify(correctOrder)) {
-      lamp.src = 'imagens/lampada-acesa.png';
-      cerejinha.src = 'imagens/cerejinhafeliz.png';
-      cerejinha.style.transform = 'scale(2)';
+      lamp.src = 'imagenss/lampada-acesa.png'; // Lâmpada acesa
+      cerejinha.src = 'imagenss/cerejinhafeliz.png'; // Imagem de sucesso do Cerejinha
+      cerejinha.style.transform = 'scale(3)';
       message.textContent = 'Parabéns, você montou corretamente!';
+      speechBubble.textContent = 'Parabéns! Mandou bem, projeto concluído!'; // Mensagem de sucesso no balão de fala
       startCherryRain(); // Inicia a chuva de cerejas
     } else {
       message.textContent = 'TENTE DE NOVO MEU CHEFE!';
-      cerejinha.src = 'imagens/cerejinhaduvida.png';
+      cerejinha.src = 'imagenss/cerejinhaduvida.png'; // Imagem de dúvida/frustração do Cerejinha
       cerejinha.style.transform = 'scale(2)';
+      speechBubble.textContent = 'Não desista, meu chefe! Tente novamente!'; // Mensagem de erro no balão de fala
     }
   }
 }
@@ -55,20 +61,24 @@ function checkOrder() {
 // Função para reiniciar o jogo
 function resetGame() {
   userOrder = [];
-  lamp.src = 'imagens/lampada-apagada.png';
-  cerejinha.src = 'imagens/cerejinhaduvida.png';
+  lamp.src = 'imagenss/lampada-apagada.png'; // Lâmpada apagada
+  cerejinha.src = 'imagenss/cerejinhaduvida.png'; // Volta a imagem inicial do Cerejinha
   cerejinha.style.transform = 'scale(1)';
   message.textContent = '';
-  slots.forEach(slot => (slot.innerHTML = ''));
+  slots.forEach((slot, index) => {
+    slot.innerHTML = ''; // Limpa as imagens
+    slot.textContent = componentNames[index]; // Recoloca o nome do componente no slot correspondente
+  });
+  speechBubble.textContent = 'Vamos tentar novamente! Me ajude a montar o projeto!'; // Mensagem de reinício no balão de fala
   clearCherryRain(); // Limpa a chuva de cerejas
 }
 
 // Função para iniciar a chuva de cerejas
 function startCherryRain() {
-  const cherryCount = 30; // Quantas cerejas vão cair
+  const cherryCount = 30; // Quantidade de cerejas que vão cair
   for (let i = 0; i < cherryCount; i++) {
     const cherry = document.createElement('img');
-    cherry.src = 'imagens/cerejaaa.png'; // Caminho da imagem de cereja
+    cherry.src = 'imagenss/cerejaaa.png'; // Caminho da imagem de cereja
     cherry.classList.add('cherry');
     cherry.style.left = Math.random() * window.innerWidth + 'px';
     cherry.style.animationDuration = (Math.random() * 2 + 3) + 's';
@@ -81,40 +91,15 @@ function clearCherryRain() {
   cherryRainContainer.innerHTML = '';
 }
 
-const speechBubble = document.querySelector('.speech-bubble'); // Referência ao balão de fala
-
-// Reiniciar o jogo
-function resetGame() {
-  userOrder = [];
-  lamp.src = 'imagens/lampada-apagada.png';
-  cerejinha.src = 'imagens/cerejinhaduvida.png';
-  cerejinha.style.transform = 'scale(1)';
-  message.textContent = '';
-  speechBubble.textContent = 'Olá, eu sou o Cerejinha, me ajude a montar o Projeto do TCC!'; // Reset da mensagem
-  slots.forEach(slot => (slot.innerHTML = '')); // Limpa os slots
-  clearCherryRain(); // Limpa a chuva de cerejas
+// Exemplo de como você pode verificar se os componentes estão na ordem correta
+function acenderLampada() {
+  lampada.src = "imagenss/lampada-acesa.png"; // Lâmpada acesa
+  lampada.classList.add('lamp-brilho');
 }
 
-const componentNames = [
-  "Bateria",
-  "Transformador +",
-  "Capacitor",
-  "Motor Elétrico",
-  "Eixo",
-  "Estator",
-  "Transformador -",
-  "Transistor"
-];
-
-function resetGame() {
-  userOrder = [];
-  lamp.src = 'imagens/lampada-apagada.png';
-  cerejinha.src = 'imagens/cerejinhaduvida.png';
-  cerejinha.style.transform = 'scale(1)';
-  message.textContent = '';
-  speechBubble.textContent = 'Olá, eu sou o Cerejinha, me ajude a montar o Projeto do TCC!'; // Reset da mensagem
-  slots.forEach((slot, index) => {
-    slot.innerHTML = `<span class="component-name">${componentNames[index]}</span>`; // Reinserir nomes nas caixas
-  });
-  clearCherryRain(); // Limpa a chuva de cerejas
+function apagarLampada() {
+  lampada.src = "imagenss/lampada-apagada.png"; // Lâmpada apagada
+  lampada.classList.remove('lamp-brilho');
 }
+
+document.getElementById('reset').addEventListener('click', resetGame);
