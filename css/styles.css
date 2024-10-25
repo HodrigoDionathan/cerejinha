@@ -1,4 +1,3 @@
-
 body {
   font-family: DynaPuff, sans-serif;
   margin: auto;
@@ -19,21 +18,30 @@ body {
 }
 
 .game-area {
-  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   
+  
 }
 
+
+
 .components {
+  margin-left: 10px;
+  margin-rigth: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
   justify-content: space-between;
+ 
+ 
+  
 }
+
+
 
 .component {
   width: 50px;
@@ -41,9 +49,12 @@ body {
 }
 
 .game-board {
+
+  
+  
   display: grid;
-  grid-template-columns: repeat(4, 176px);
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, 131px);
+  grid-gap: 6px;
   
   justify-content: center;
 }
@@ -53,12 +64,17 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
 
+.component-wrapper:hover {
+  transform: scale(1.2); /* Aumenta o tamanho em 10% ao passar o mouse */
+}
 .component-name {
-  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 2px 4px black;
   margin-bottom: 5px; /* Espaço abaixo do nome */
-  font-size: 11px;
+  font-size: 13px;
   color: white;
   text-align: center;
 }
@@ -69,6 +85,7 @@ body {
 }
 
 .slot {
+  text-shadow: 1px 2px 2px black;
   font-family: Arial, Helvetica, sans-serif;
   width: 132px; /* Aumentar o tamanho dos slots */
   height: 80px;
@@ -77,7 +94,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 11px;
+  font-size: 13px;
   color: white;
   padding: 0px;
 }
@@ -101,15 +118,26 @@ body {
 }
 
 #reset {
+  margin-shadow: 1px 2px 3px pink;
+  border-radius: 20px;
+font-family: DynaPuff;
+  background-color: #008CBA;
+  font-size: 18px;
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #003f7f;
-  color: white;
+  color: rgb(249, 249, 22);
   border: none;
   cursor: pointer;
 }
 
 #message {
+  font-size:larger;
+  text-shadow: 0 0 5px #0043ff82, 0 0 10px #ff1800a6, 0 0 20px #ff0000, 0 0 40px #ff3b00, 0 0 80px #ff00ea;
+  animation: blinkNeon 1.5s infinite alternate; /* Animação para piscar */
+
+    
+}
   font-size: 20px;
   margin-top: 10px;
   font-weight: bold;
@@ -164,9 +192,10 @@ body {
 }
 
 .speech-bubble {
+  text-shadow: 1px 2px 2px black;
   position: absolute; /* Posiciona o balão em relação ao contêiner */
   bottom: 4%; /* Posiciona acima da imagem */
-  left: 256%; /* Centraliza o balão em relação à imagem */
+  left: 215%; /* Centraliza o balão em relação à imagem */
   transform: translateX(-80%); /* Centraliza o balão horizontalmente */
   background-color: #75bf77; /* Cor de fundo do balão */
   border-radius: 34px; /* Arredonda os cantos do balão */
@@ -176,6 +205,8 @@ body {
   font-size: 12px; /* Tamanho da fonte */
   z-index: 1; /* Para garantir que o balão fique acima da imagem */
 }
+
+
 
 /* Opcional: Para adicionar uma "ponta" ao balão */
 .speech-bubble::after {
@@ -189,38 +220,15 @@ body {
   border-color: transparent transparent #75bf77 transparent; /* Cores da ponta */
 }
 
-/* menu do quebra  cabeça*/
-nav#menu {
-    display: block;
+
+.neon-text {
+  color: #fff; /* Cor do texto */
+
+  text-shadow: 0 0 5px #eeff00, 0 0 10px #eeff00, 0 0 20px #eeff00, 0 0 40px #eeff00, 0 0 80px #eeff00;
+  animation: blinkNeon 1.5s infinite alternate; /* Animação para piscar */
 }
 
-nav#menu ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-      flex-direction: column;
-   
-}
-
-nav#menu li {
-    margin: 0 15px; /* Espaçamento entre os itens do menu */
-}
-
-nav#menu a {
-  margin-top:199px;
-    color: #333;
-    text-decoration: none;
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav#menu a:hover {
-    background-color: #0066cc; /* Cor ao passar o mouse */
-    color: white; /* Cor do texto ao passar o mouse */
-}
-/*caixa da pagina Jogo da principal index.html*/
-.instruction-box {
+  .instruction-box {
     text-shadow: 1px 1px 2px black;
     background-color: #75bf77;
     border: 2px solid #333;
@@ -228,7 +236,7 @@ nav#menu a:hover {
     border-radius: 35px;
     box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 92%;
+    width: 99%;
     margin: -2px auto;
     font-family: 'DynaPuff', cursive;
     font-size: 0.90rem;
